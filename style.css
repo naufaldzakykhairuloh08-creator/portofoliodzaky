@@ -369,20 +369,19 @@ body {
     margin-top: 5rem;
 }
 
-.input-box input {
-    position: relative;
-    border-radius: 2rem;
-    border: 2px solid black;
-    padding: 20px 50px;
-    font-size: 3rem
+.input-box .input {
+    width: 100%;
+    max-width: 600px;
 }
 
+.input-box input,
 .input-box textarea {
+    box-sizing: border-box;
+    width: 100%;
     border-radius: 2rem;
     border: 2px solid black;
-    padding: 20px 90px;
-    font-size: 3rem;
-    width: 100%;
+    padding: 20px 24px;
+    font-size: 1.5rem;
 }
 
 .input-box textarea {
@@ -390,12 +389,24 @@ body {
     resize: none;
 }
 
+.input-box input::placeholder,
 .input-box textarea::placeholder {
-    font-size: 3rem;
-    padding-left: 99px;
+    font-size: 1.5rem;
 }
 
-.input-box input::placeholder {
-    font-size: 3rem;
-    padding-left: 140px;
+@media (max-width: 600px) {
+    .input-box input,
+    .input-box textarea {
+        padding: 14px 18px;
+        font-size: 1rem;
+    }
+
+    .input-box input::placeholder,
+    .input-box textarea::placeholder {
+        font-size: 1rem;
+    }
+
+    .input-box textarea {
+        height: 200px;
+    }
 }
