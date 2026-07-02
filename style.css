@@ -1,0 +1,401 @@
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    background-color: white
+}
+
+.navbar {
+    background-color: black;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 1, 3rem;
+    font-weight: 600;
+    text-wrap: nowrap;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 1, 3rem;
+    font-weight: 600;
+    margin: 8px;
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar-toggler {
+    color: #fff;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    display: inline-block;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    left: 0;
+}
+
+.navbar-toggler-icon::before {
+    top: -7px;
+}
+
+.navbar-toggler-icon::after {
+    top: 7px;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 50px;
+}
+
+.bi-list {
+    font-size: xx-large;
+}
+
+.home {
+    padding-top: 120px;
+}
+
+.img-fluid {
+    border: 2px solid black;
+    border-radius: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.img-fluid:hover {
+    box-shadow:
+        10px 10px 40px #020202,
+        -10px -10px 40px #535354;
+    transform: translateY(-10px)scale(1.02);
+    border-radius: 100%;
+}
+
+.info-box {
+    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+    background-clip: text;
+    color: transparent;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.my-btn {
+    color: black;
+    display: inline-block;
+    border-radius: 3rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.my-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.img-thumbnail {
+    width: 460px;
+    border-radius: 48px;
+    border: none;
+}
+
+.card-title {
+    width: 100px;
+    background:  linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+    background-clip: text;
+    color: transparent;
+}
+
+.card {
+    color: black;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.2s ease-in-out;
+}
+
+.card-img-top {
+    border-radius: 16px;
+}
+
+.card:hover {
+    background-color: black;
+    color: white;
+}
+
+.Contact {
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.project-title {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.project-card {
+    color: black;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    background-color: black;
+    color: white;
+    transform: translateY(-10px)scale(1.02);
+}
+
+.project-card:hover .my-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+.project-card:hover .my-btn:hover {
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+}
+
+.footer {
+  background-color: white;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 35px;
+}
+
+.wrapper {
+  display: flex;          
+  justify-content: center;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  margin: 0;              
+  padding-left: 0;        
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: black;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon a {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  background: transparent;
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #25D366;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: rgb(30, 30, 30);
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+ background: #f09433;
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.wrapper .icon:hover svg {
+  color: #fff;
+  fill: #fff;
+}
+
+.copyright {
+    color: black;
+    font-size: 300;
+    margin-top: 1rem;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.input-box input {
+    position: relative;
+    border-radius: 2rem;
+    border: 2px solid black;
+    padding: 20px 50px;
+    font-size: 3rem
+}
+
+.input-box textarea {
+    border-radius: 2rem;
+    border: 2px solid black;
+    padding: 20px 90px;
+    font-size: 3rem;
+    width: 100%;
+}
+
+.input-box textarea {
+    height: 300px;
+    resize: none;
+}
+
+.input-box textarea::placeholder {
+    font-size: 3rem;
+    padding-left: 99px;
+}
+
+.input-box input::placeholder {
+    font-size: 3rem;
+    padding-left: 140px;
+}
